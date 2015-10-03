@@ -11,8 +11,25 @@ module.exports = function(grunt) {
           keepalive: true
         }
       }
+    },
+
+    jade: {
+      compile: {
+        options: {
+          pretty: true,
+          data: {}
+        },
+        files: [{
+          cwd: 'src',
+          expand: true,
+          src: [ '**/*.jade' ],
+          dest: 'build',
+          ext: '.html'
+        }]
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-jade');
 }
