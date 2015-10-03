@@ -27,9 +27,22 @@ module.exports = function(grunt) {
           ext: '.html'
         }]
       }
+    },
+
+    sass: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'src',
+          src: [ 'assests/stylesheets/main.sass' ],
+          dest: 'build',
+          ext: '.css'
+        }]
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-jade');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 }
