@@ -19,7 +19,7 @@ module.exports = function(grunt) {
           data: {}
         },
         files: [{
-          cwd: 'src',
+          cwd: 'src/views',
           expand: true,
           src: [ '**/*.jade' ],
           dest: 'build',
@@ -41,12 +41,15 @@ module.exports = function(grunt) {
     },
 
     watch: {
+      options: {
+        livereload: true,
+      },
       sass: {
         files: [ 'src/assests/stylesheets/**/*.sass', 'src/assests/stylesheets/**/*.scss' ],
         tasks: [ 'sass' ]
       },
       jade: {
-        files: 'src/**/*.jade',
+        files: 'src/views/**/*.jade',
         tasks: [ 'jade' ]
       }
     },
