@@ -39,10 +39,22 @@ module.exports = function(grunt) {
           ext: '.css'
         }]
       }
+    },
+
+    watch: {
+      sass: {
+        files: [ 'src/assests/stylesheets/**/*.sass', 'src/assests/stylesheets/**/*.scss' ],
+        tasks: [ 'sass' ]
+      },
+      jade: {
+        files: 'src/**/*.jade',
+        tasks: [ 'jade' ]
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 }
