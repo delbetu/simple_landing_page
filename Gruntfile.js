@@ -7,8 +7,7 @@ module.exports = function(grunt) {
         options: {
           port: 4000,
           base: 'build',
-          hostname: '*',
-          keepalive: true
+          hostname: '*'
         }
       }
     },
@@ -68,5 +67,10 @@ module.exports = function(grunt) {
   grunt.registerTask(
     'build',
     [ 'clean', 'jade', 'sass' ]
+  );
+
+  grunt.registerTask(
+    'default',
+    [ 'build', 'connect', 'watch' ]
   );
 }
