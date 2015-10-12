@@ -58,6 +58,15 @@ module.exports = function(grunt) {
       build: {
         src: [ 'build' ]
       }
+    },
+
+    copy: {
+      main: {
+        expand: true,
+        cwd: 'src',
+        src: 'assets/images/**/*',
+        dest: 'build'
+      },
     }
   });
 
@@ -66,10 +75,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.registerTask(
     'build',
-    [ 'clean', 'jade', 'sass' ]
+    [ 'clean', 'jade', 'sass', 'copy' ]
   );
 
   grunt.registerTask(
