@@ -33,7 +33,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'src',
-          src: [ 'assests/stylesheets/main.sass' ],
+          src: [ 'assets/stylesheets/main.sass' ],
           dest: 'build',
           ext: '.css'
         }]
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
         livereload: true,
       },
       sass: {
-        files: [ 'src/assests/stylesheets/**/*.sass', 'src/assests/stylesheets/**/*.scss' ],
+        files: [ 'src/assets/stylesheets/**/*.sass', 'src/assets/stylesheets/**/*.scss' ],
         tasks: [ 'sass' ]
       },
       jade: {
