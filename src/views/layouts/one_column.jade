@@ -1,12 +1,11 @@
 doctype html
-html(lang="en")
+html
   head
+    meta(charset="utf-8")
     block title
-      title defaultTitle
-    script(type='text/javascript').
-      if (foo) {
-         bar(1 + 5)
-      }
+      title Great Landing
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="assets/stylesheets/main.css")
     script(src='//localhost:35729/livereload.js')
   body
     block content
