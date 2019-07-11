@@ -1,7 +1,7 @@
-## This file explains the how-to this site was built
-### The project aims to build a simple landing page.
+# Simple landing page.
+Playing with js+css+html
 ___
-####Step 1 Build the development environment.
+#### Build dev-environment.
 Use grunt to define the development flow
 Source files under src/ folder and final site under build/ folder
 Creates a task to build the site
